@@ -1,0 +1,16 @@
+Adding a new camera with ADAravis:
+
+This support module contains python scripts to create EPICS database templates and edl gui files from an XML file that resides on the camera.
+
+Obtain the XML file from the camera detailing features by using the arv-tool-x.x binary. A reference to this can be found in the RELEASE.local
+file of the ADAravis module (eg, /dls_sw/prod/tools/RHEL7-x86_64/aravis/0-6-0/prefix/bin/arv-tool-0.6). The following command is an example
+with the IP address being that of the camera:
+
+/dls_sw/prod/tools/RHEL7-x86_64/aravis/0-6-0/prefix/bin/arv-tool-0.6 -a 172.23.240.251 genicam >> AVT_Manta_G235B.xml
+
+
+Put that XML file in the /xml directory of this module. Run the python script /scripts/updateFromXmlDir.py (use dls-python3 to do this)
+This will generate all the gui and template files and put them in the correct directories ready for a make.
+
+
+Edit the builder.py file in the ADAravis module to include the new camera.

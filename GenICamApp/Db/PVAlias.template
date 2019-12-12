@@ -1,0 +1,96 @@
+# Macros:
+#% macro, P, Device Prefix
+#% macro, R, Device Suffix
+
+record(mbbi, "$(P)$(R)GC_TriggerSource_RBV") {
+    alias("$(P)$(R)TriggerSource_RBV")
+}
+
+record(mbbo, "$(P)$(R)GC_TriggerSource") {
+    alias("$(P)$(R)TriggerSource")
+}
+
+record(longin, "$(P)$(R)GC_ExpAutoTarget_RBV") {
+    alias("$(P)$(R)ExposureAutoTarg_RBV")
+}
+
+record(longout, "$(P)$(R)GC_ExpAutoTarget") {
+    alias("$(P)$(R)ExposureAutoTarg")
+}
+
+
+record(mbbi, "$(P)$(R)GC_GainAuto_RBV") {
+    alias("$(P)$(R)GainAuto_RBV")
+}
+
+record(mbbo, "$(P)$(R)GC_GainAuto") {
+    alias("$(P)$(R)GainAuto")
+}
+
+record(longin, "$(P)$(R)GC_GainAutoTarget_RBV") {
+    alias("$(P)$(R)GainAutoTarget_RBV")
+}
+
+record(longout, "$(P)$(R)GC_GainAutoTarget") {
+    alias("$(P)$(R)GainAutoTarget")
+}
+
+record(mbbi, "$(P)$(R)GC_BalRatioSelector_RBV") {
+    alias("$(P)$(R)BalanceRatioSele_RBV")
+}
+
+record(mbbo, "$(P)$(R)GC_BalRatioSelector") {
+    alias("$(P)$(R)BalanceRatioSele")
+}
+
+record(ai, "$(P)$(R)GC_BalanceRatioAbs_RBV") {
+    alias("$(P)$(R)BalanceRatioAbs_RBV")
+}
+
+record(ao, "$(P)$(R)GC_BalanceRatioAbs") {
+    alias("$(P)$(R)BalanceRatioAbs")
+}
+
+record(mbbi, "$(P)$(R)GC_BalanceWhiteAuto_RBV") {
+    alias("$(P)$(R)BalanceWhiteAut0_RBV")
+}
+
+record(mbbo, "$(P)$(R)GC_BalanceWhiteAuto") {
+    alias("$(P)$(R)BalanceWhiteAut0")
+}
+
+record(ai, "$(P)$(R)ARFramesCompleted")
+{
+    alias("$(P)$(R)COMPLETED_RBV")
+}
+
+record(ai, "$(P)$(R)ARFrameFailures")
+{
+    alias("$(P)$(R)FAILURES_RBV")
+}
+
+record(ai, "$(P)$(R)ARFrameUnderruns")
+{
+    alias("$(P)$(R)UNDERRUNS_RBV")
+}
+
+record(longout, "$(P)$(R)ARResetCamera")
+{
+    alias("$(P)$(R)RESET")
+}
+
+record(mbbi, "$(P)$(R)ARLeftShift_RBV") {
+    alias("$(P)$(R)LEFTSHIFT_RBV")
+}
+
+record(mbbo, "$(P)$(R)ARLeftShift") {
+    alias("$(P)$(R)LEFTSHIFT")
+}
+
+record(bi, "$(P)$(R)ARHWImageMode_RBV") {
+    alias("$(P)$(R)HWIMAGEMODE_RBV")
+}
+
+record(bo, "$(P)$(R)ARHWImageMode") {
+    alias("$(P)$(R)HWIMAGEMODE")
+}
