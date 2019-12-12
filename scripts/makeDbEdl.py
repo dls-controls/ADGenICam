@@ -38,7 +38,7 @@ edl_filename = db_filename.replace("template","edl")
 os.system(f'dls-python makeDb.py {args[0]} {db_filename}')
 
 # Move the tempate file into final location
-os.system(f'mv {db_filename} ../GenICamApp/Db/')
+os.system(f'mv {db_filename} ../db/')
 
 # Make the adl file ready for conversion
 os.system(f'dls-python makeAdl.py {args[0]} {edl_filename.replace(".edl","")}')
@@ -68,7 +68,7 @@ for screen in featureScreens:
     fin.write(data)
     fin.close
     # Move screens to final location
-    os.system(f'mv {screen.decode().replace(".adl",".edl")} ../GenICamApp/op/edl/')
+    os.system(f'mv {screen.decode().replace(".adl",".edl")} ../data/')
     # Delete any junk left by the other scripts
     os.system(f'rm {screen.decode()} {screen.decode().replace(".adl",".adl.db")}')
 
