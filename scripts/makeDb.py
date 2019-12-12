@@ -26,6 +26,7 @@ except:
 # parse xml file to dom object
 xml_root = parseString("".join(genicam_lines[start_line:]).lstrip())
 db_filename = args[1]
+edl_filename = db_filename.replace("template","edl")
 
 # function to read element children of a node
 def elements(node):
@@ -125,6 +126,7 @@ print '#% macro, R, Device Suffix'
 print '#% macro, PORT, Asyn Port name'
 print '#% macro, TIMEOUT, Timeout, default=1'
 print '#% macro, ADDR, Asyn Port address, default=0'
+print '#%s gui, $(PORT), edmtab, ADGenICam.edl, P=$(P),R=$(R),C=%s' % ("%",edl_filename.replace(".edl",""))
 print 
 
 # for each node
