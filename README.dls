@@ -9,8 +9,6 @@ with the IP address being that of the camera:
 /dls_sw/prod/tools/RHEL7-x86_64/aravis/0-6-0/prefix/bin/arv-tool-0.6 -a 172.23.240.251 genicam >> AVT_Manta_G235B.xml
 
 
-Put that XML file in the /xml directory of this module. Run the python script /scripts/updateFromXmlDir.py (use dls-python3 to do this)
-This will generate all the gui and template files and put them in the correct directories ready for a make.
-
+Put that XML file in the /xml directory of this module. Make the module and the new guis / templates with appear in the db and data directories
 
 Edit the builder.py file in the ADAravis module to include the new camera.
