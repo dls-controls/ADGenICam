@@ -40,3 +40,4 @@ auto_settings.sav*
 *.swp
 .idea/
 CMakeLists.txt
+convert.err
