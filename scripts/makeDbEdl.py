@@ -35,7 +35,7 @@ db_filename = args[0].split('/')[-1].replace("xml","template")
 edl_filename = db_filename.replace("template","edl")
 
 # Create the template file
-os.system(f'dls-python makeDb.py {args[0]} {db_filename}')
+os.system(f'dls-python3 makeDb.py {args[0]} {db_filename}')
 
 # Move the tempate file into final location
 os.system(f'mv {db_filename} ../db/')
