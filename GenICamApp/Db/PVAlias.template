@@ -10,11 +10,11 @@ record(mbbo, "$(P)$(R)GC_TriggerSource") {
     alias("$(P)$(R)TriggerSource")
 }
 
-record(longin, "$(P)$(R)GC_ExpAutoTarget_RBV") {
+record(ai, "$(P)$(R)GC_ExpAutoTarget_RBV") {
     alias("$(P)$(R)ExposureAutoTarg_RBV")
 }
 
-record(longout, "$(P)$(R)GC_ExpAutoTarget") {
+record(ao, "$(P)$(R)GC_ExpAutoTarget") {
     alias("$(P)$(R)ExposureAutoTarg")
 }
 
@@ -27,11 +27,11 @@ record(mbbo, "$(P)$(R)GC_GainAuto") {
     alias("$(P)$(R)GainAuto")
 }
 
-record(longin, "$(P)$(R)GC_GainAutoTarget_RBV") {
+record(ai, "$(P)$(R)GC_GainAutoTarget_RBV") {
     alias("$(P)$(R)GainAutoTarget_RBV")
 }
 
-record(longout, "$(P)$(R)GC_GainAutoTarget") {
+record(ao, "$(P)$(R)GC_GainAutoTarget") {
     alias("$(P)$(R)GainAutoTarget")
 }
 
