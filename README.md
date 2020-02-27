@@ -2,7 +2,7 @@ ADGenICam
 ===========
 An 
 [EPICS](http://www.aps.anl.gov/epics)
-[areaDetector](https://cars.uchicago.edu/software/epics/areaDetector.html)
+[areaDetector](https://github.com/areaDetector/areaDetector/blob/master/README.md)
 driver for
 [GenICam](https://www.emva.org/standards-technology/genicam/) cameras.
 This is a base class that actual drivers inherit from.  These actual drivers
@@ -18,4 +18,4 @@ The following drivers currently derive from this base class:
 
 Additional information:
 * [Documentation](https://areadetector.github.io/master/ADGenICam/ADGenICam.html)
-* [Release notes](RELEASE.md).
+* [Release notes](RELEASE.md)
