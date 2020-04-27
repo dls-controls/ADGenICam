@@ -4,7 +4,7 @@ major 4
 minor 0
 release 1
 x 713
-y 194
+y 268
 w 390
 h 820
 font "arial-bold-r-12.0"
@@ -67,9 +67,9 @@ major 4
 minor 1
 release 0
 x 0
-y 470
+y 570
 w 390
-h 310
+h 205
 fgColor index 14
 bgColor index 3
 topShadowColor index 1
@@ -143,5 +143,26 @@ replaceSymbols {
   8 1
 }
 icon
+endObjectProperties
+
+# (Embedded Window)
+object activePipClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 0
+y 470
+w 390
+h 100
+fgColor index 14
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+displaySource "file"
+file "ADGenICamAdditional"
+sizeOfs 5
+numDsps 0
+noScroll
 endObjectProperties
 
