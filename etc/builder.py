@@ -11,7 +11,7 @@ class GenICam(AsynPort,):
     Dependencies = (ADCore,)
     # This tells xmlbuilder to use PORT instead of name as the row ID
     #UniqueName = "PORT"
-    def __init__(self, P,R,PORT, ID, CLASS, PV_ALIAS, BUFFERS = 50, MEMORY = -1, **args):
+    def __init__(self, P,R,PORT, ID, CLASS, BUFFERS = 50, MEMORY = -1, **args):
         # Init the superclass
         print"GenICam __init__ called\n"
         print"PORT: "+PORT + " ID: " + ID + " CLASS: " + CLASS + "\n"
@@ -28,14 +28,8 @@ class GenICam(AsynPort,):
             TrueName = "_%s" % CLASS
             TemplateFile = "%s.template" % CLASS
 
-        class _alias(AutoSubstitution):
-            ModuleName = GenICam.ModuleName
-            TemplateFile = "PVAlias.template"
-
         makeTemplateInstance(_tmp, locals(), args)
 
-        if PV_ALIAS > 0:
-            makeTemplateInstance(_alias, locals(), args)
         
 
 

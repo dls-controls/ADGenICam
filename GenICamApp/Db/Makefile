@@ -8,7 +8,6 @@ include $(TOP)/configure/CONFIG
 #DB_OPT = YES
 
 DB += ADGenICam.template
-DB += PVAlias.template
 
 include $(TOP)/configure/RULES
 #----------------------------------------
