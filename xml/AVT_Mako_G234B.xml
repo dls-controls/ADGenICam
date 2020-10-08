@@ -1,4 +1,3 @@
-Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 <?xml version="1.0" encoding="utf-8"?>
 
 <RegisterDescription
@@ -13,11 +12,11 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
 
 
- MinorVersion="18318"
+ MinorVersion="15954"
  SubMinorVersion="0"
  ToolTip="Allied_Vision_Technologies"
- ProductGuid="90900a75-075b-4dc6-ba1b-b9791b4af648"
- VersionGuid="ff48339f-6e2b-4574-b563-347122fd9429"
+ ProductGuid="5b50fb1f-ee1c-4e92-9c40-4faeeee535e1"
+ VersionGuid="eee00867-0367-4108-ae19-1e6ec30959db"
  xmlns="http://www.genicam.org/GenApi/Version_1_0"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.genicam.org/GenApi/Version_1_0 http://www.genicam.org/GenApi/GenApiSchema_Version_1_0.xsd">
@@ -35,6 +34,9 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pFeature>IO</pFeature>
   <pFeature>EventControl</pFeature>
   <pFeature>SavedUserSets</pFeature>
+
+
+
  </Category>
 
  <Category Name="Info" NameSpace="Custom">
@@ -47,7 +49,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pFeature>DeviceModelName</pFeature>
   <pFeature>DeviceFirmwareVersion</pFeature>
   <pFeature>DeviceID</pFeature>
-  <pFeature>DeviceUserID</pFeature>
   <pFeature>DevicePartNumber</pFeature>
   <pFeature>DeviceScanType</pFeature>
  </Category>
@@ -87,9 +88,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pFeature>BandwidthControlMode</pFeature>
   <pFeature>StreamHold</pFeature>
   <pFeature>Timestamp</pFeature>
-
-
-
+  <pFeature>PTP</pFeature>
   <pFeature>GevSCPSPacketSize</pFeature>
   <pFeature>ChunkModeActive</pFeature>
   <pFeature>PayloadSize</pFeature>
@@ -108,11 +107,20 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pFeature>GevTimestampControlReset</pFeature>
   <pFeature>GevTimestampValue</pFeature>
  </Category>
+
+ <Category Name="PTP" NameSpace="Custom">
+  <pFeature>PtpMode</pFeature>
+  <pFeature>PtpStatus</pFeature>
+
+
+
+
+  <pFeature>PtpAcquisitionGateTime</pFeature>
+ </Category>
+
  <Category Name="ImageMode" NameSpace="Custom">
   <pFeature>SensorWidth</pFeature>
   <pFeature>SensorHeight</pFeature>
-  <pFeature>SensorTaps</pFeature>
-  <pFeature>SensorDigitizationTaps</pFeature>
   <pFeature>BinningHorizontal</pFeature>
   <pFeature>BinningVertical</pFeature>
 
@@ -129,9 +137,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pFeature>WidthMax</pFeature>
   <pFeature>HeightMax</pFeature>
   <pFeature>PixelFormat</pFeature>
-
-  <pFeature>SensorReadoutMode</pFeature>
-
   <pFeature>Width</pFeature>
   <pFeature>Height</pFeature>
   <pFeature>OffsetX</pFeature>
@@ -146,6 +151,9 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
   <pFeature>BlackLevelControl</pFeature>
   <pFeature>Gamma</pFeature>
+
+
+
   <pFeature>Whitebalance</pFeature>
   <pFeature>Iris</pFeature>
   <pFeature>DefectMask</pFeature>
@@ -208,7 +216,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pFeature>GainSelector</pFeature>
 
   <pFeature>Gain</pFeature>
-  <pFeature>GainRaw</pFeature>
 
 
 
@@ -329,17 +336,27 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pFeature>EventAcquisitionRecordTrigger</pFeature>
   <pFeature>EventLine1RisingEdge</pFeature>
   <pFeature>EventLine1FallingEdge</pFeature>
-
   <pFeature>EventLine2RisingEdge</pFeature>
   <pFeature>EventLine2FallingEdge</pFeature>
+  <pFeature>EventLine3RisingEdge</pFeature>
+  <pFeature>EventLine3FallingEdge</pFeature>
+  <pFeature>EventLine4RisingEdge</pFeature>
+  <pFeature>EventLine4FallingEdge</pFeature>
         <pFeature>EventFrameTriggerReady</pFeature>
   <pFeature>EventExposureStart</pFeature>
+
+
+
+
+  <pFeature>EventPtpSyncLost</pFeature>
+  <pFeature>EventPtpSyncLocked</pFeature>
+
   <pFeature>EventOverflow</pFeature>
   <pFeature>EventError</pFeature>
  </Category>
 
  <Category Name="ColorTransformationControl" NameSpace="Standard">
- 
+
         <Description>Category that contains the Color Transformation control features.</Description>
   <DisplayName>Color Transformation Control</DisplayName>
   <Visibility>Beginner</Visibility>
@@ -348,6 +365,9 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pFeature>ColorTransformationValueSelector</pFeature>
   <pFeature>ColorTransformationValue</pFeature>
  </Category>
+
+
+
  <Category Name="PvApi" NameSpace="Custom">
   <pFeature>PvDummyTriggerSelector</pFeature>
   <pFeature>PvDummyFrameStartTriggerMode</pFeature>
@@ -370,6 +390,8 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pFeature>PvGainAutoMax</pFeature>
 
   <pFeature>OffsetValue</pFeature>
+  <pFeature>PtpAcquisitionGateTimeHi</pFeature>
+  <pFeature>PtpAcquisitionGateTimeLo</pFeature>
  </Category>
  <Integer Name="FirmwareVerMajor" NameSpace="Custom">
   <Extension>
@@ -404,7 +426,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvCategory Path="/Info/Sensor"/>
   </Extension>
- 
+
   <Description>Type of image sensor.</Description>
   <EnumEntry Name="Mono" NameSpace="Custom">
    <Value>0</Value>
@@ -419,60 +441,16 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvCategory Path="/Info/Sensor"/>
   </Extension>
- 
+
   <Description>Maximum bit depth of sensor.</Description>
   <pValue>RegSensorBits</pValue>
  </Integer>
-
- <Enumeration Name="SensorTaps" NameSpace="Standard">
- 
-        <Description>Number of taps of the camera sensor.</Description>
-  <Visibility>Expert</Visibility>
-  <pIsImplemented>RegImageModeInqSensorTaps</pIsImplemented>
-  <pIsLocked>TLParamsLocked</pIsLocked>
-  <Streamable>Yes</Streamable>
-        <EnumEntry Name="One" NameSpace="Standard">
-   <pIsImplemented>RegSensorTapsInqOne</pIsImplemented>
-   <Value>0</Value>
-  </EnumEntry>
-        <EnumEntry Name="Two" NameSpace="Standard">
-   <pIsImplemented>RegSensorTapsInqTwo</pIsImplemented>
-   <Value>1</Value>
-  </EnumEntry>
-        <EnumEntry Name="Four" NameSpace="Standard">
-   <pIsImplemented>RegSensorTapsInqFour</pIsImplemented>
-   <Value>3</Value>
-  </EnumEntry>
-  <pValue>RegSensorTaps</pValue>
- </Enumeration>
-
-    <Enumeration Name="SensorDigitizationTaps" NameSpace="Standard">
- 
-        <Description>Number of digitized samples outputted simultaneously by the camera A/D conversion stage.</Description>
-  <Visibility>Expert</Visibility>
-  <pIsImplemented>RegImageModeInqSensorTaps</pIsImplemented>
-  <pIsLocked>TLParamsLocked</pIsLocked>
-  <Streamable>Yes</Streamable>
-        <EnumEntry Name="One" NameSpace="Standard">
-   <pIsImplemented>RegSensorTapsInqOne</pIsImplemented>
-   <Value>0</Value>
-  </EnumEntry>
-        <EnumEntry Name="Two" NameSpace="Standard">
-   <pIsImplemented>RegSensorTapsInqTwo</pIsImplemented>
-   <Value>1</Value>
-  </EnumEntry>
-        <EnumEntry Name="Four" NameSpace="Standard">
-   <pIsImplemented>RegSensorTapsInqFour</pIsImplemented>
-   <Value>3</Value>
-  </EnumEntry>
-  <pValue>RegSensorDigitizationTaps</pValue>
- </Enumeration>
 
  <Integer Name="SensorWidth" NameSpace="Standard">
   <Extension>
    <PvCategory Path="/Info/Sensor"/>
   </Extension>
- 
+
   <Description>Full width of image sensor.</Description>
   <pValue>RegSensorWidth</pValue>
  </Integer>
@@ -481,7 +459,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvCategory Path="/Info/Sensor"/>
   </Extension>
- 
+
   <Description>Full height of image sensor.</Description>
   <pValue>RegSensorHeight</pValue>
  </Integer>
@@ -493,12 +471,9 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="BinningX"/>
   </Extension>
- 
+
   <Description>Binning in horizontal direction. Binning is the summing of charge of adjacent pixels.</Description>
   <pIsImplemented>RegImageModeInqBinningX</pIsImplemented>
-
-  <pIsLocked>TLParamsLocked</pIsLocked>
-
   <Streamable>Yes</Streamable>
   <pValue>BinningHorizontalValue</pValue>
   <Min>1</Min>
@@ -521,12 +496,9 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="BinningY"/>
   </Extension>
- 
+
   <Description>Binning in vertical direction. Binning is the summing of charge of adjacent pixels.</Description>
   <pIsImplemented>RegImageModeInqBinningY</pIsImplemented>
-
-  <pIsLocked>TLParamsLocked</pIsLocked>
-
   <Streamable>Yes</Streamable>
   <pValue>BinningVerticalValue</pValue>
   <Min>1</Min>
@@ -546,8 +518,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </IntSwissKnife>
  <Integer Name="StreamBytesPerSecond" NameSpace="Custom">
 
-
-
   <Description>Bandwidth allocation: the camera will consume up to this bandwidth, in bytes per second. You must set this value if multiple cameras share the same ethernet adapter, otherwise data will be lost. The sum of all StreamBytesPerSecond values of all cameras must not exceed the available bandwidth.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegStreamBytesPerSec</pValue>
@@ -556,8 +526,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Boolean Name="StreamFrameRateConstrain" NameSpace="Custom">
-
-
 
   <Description>When enabled, the frame rate of the camera is constrained by available bandwidth. When disabled, the camera can image faster than it can send data.</Description>
   <Streamable>Yes</Streamable>
@@ -570,8 +538,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="BandwidthCtrlMode"/>
   </Extension>
-
-
 
   <Description>Bandwidth allocation can be controlled by StreamBytesPerSecond, or by register SCPD0. If you do not understand SCPD0 and how this driver uses this register, leave this set to "StreamBytesPerSecond".</Description>
   <Streamable>Yes</Streamable>
@@ -589,8 +555,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Enumeration Name="StreamHoldEnable" NameSpace="Custom">
 
-
-
   <Description>Control on-camera image storage; this control is like a "pause" button for the image stream. When enabled, images remain stored on the camera, and are not transmitted to the host. When disabled, the image stream resumes, and any stored images are sent to the host.</Description>
   <Streamable>Yes</Streamable>
   <EnumEntry Name="Off" NameSpace="Custom">
@@ -603,7 +567,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Enumeration>
 
  <Integer Name="StreamHoldCapacity" NameSpace="Custom">
- 
+
   <Description>Maximum number of images (for the current size and format) which can be stored on the camera when StreamHold is enabled.</Description>
   <pValue>RegStreamHoldCapacity</pValue>
  </Integer>
@@ -634,8 +598,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvRename Name="TimeStampFrequency"/>
   </Extension>
 
-
-
   <Description>Frequency of image timestamp, in Hertz.</Description>
   <pValue>RegTimestampTickFreqLow</pValue>
  </Integer>
@@ -644,7 +606,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="TimeStampValueLatch"/>
   </Extension>
- 
+
   <Description>Capture timestamp and store in GevTimestampValue.</Description>
   <ImposedAccessMode>WO</ImposedAccessMode>
   <pValue>RegTimestampControl</pValue>
@@ -655,7 +617,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="TimeStampReset"/>
   </Extension>
- 
+
   <Description>Reset the timestamp.</Description>
   <ImposedAccessMode>WO</ImposedAccessMode>
   <pValue>RegTimestampControl</pValue>
@@ -666,8 +628,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
-
-
 
   <Description>Value of timestamp, when latched by GevTimestampControlLatch.</Description>
   <pValue>RegTimestampValue64</pValue>
@@ -684,8 +644,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvCategory Path="/GigE/Timestamp"/>
   </Extension>
 
-
-
   <Description>High-word value of timestamp, when latched by GevTimestampControlLatch.</Description>
   <pValue>RegTimestampValueHi</pValue>
  </Integer>
@@ -695,22 +653,14 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvCategory Path="/GigE/Timestamp"/>
   </Extension>
 
-
-
   <Description>Low-word value of timestamp, when latched by GevTimestampControlLatch.</Description>
   <pValue>RegTimestampValueLo</pValue>
  </Integer>
 
  <Integer Name="DecimationHorizontal" NameSpace="Standard">
- 
+
   <Description>Horizontal decimation (sub-sampling) of the image.</Description>
   <pIsImplemented>RegImageModeInqDecimationHorizontal</pIsImplemented>
-
-
-
-
-  <pIsLocked>TLParamsLocked</pIsLocked>
-
   <Streamable>Yes</Streamable>
   <pValue>RegDecimationHorizontalValue</pValue>
   <Min>1</Min>
@@ -718,15 +668,9 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="DecimationVertical" NameSpace="Standard">
- 
+
   <Description>Vertical decimation (sub-sampling) of the image.</Description>
   <pIsImplemented>RegImageModeInqDecimationVertical</pIsImplemented>
-
-
-
-
-  <pIsLocked>TLParamsLocked</pIsLocked>
-
   <Streamable>Yes</Streamable>
   <pValue>RegDecimationVerticalValue</pValue>
   <Min>1</Min>
@@ -734,36 +678,106 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Boolean Name="ReverseX" NameSpace="Standard">
- 
+
   <Description>ReverseX is used to flip horizontally the image sent by the device. The AOI is applied after the flipping.</Description>
   <pIsImplemented>RegMirrorXInq</pIsImplemented>
-
-
-
-
-
   <Streamable>Yes</Streamable>
   <pValue>RegMirrorX</pValue>
  </Boolean>
 
  <Boolean Name="ReverseY" NameSpace="Standard">
- 
+
   <Description>ReverseY is used to flip vertically the image sent by the device. The AOI is applied after the flipping.</Description>
   <pIsImplemented>RegMirrorYInq</pIsImplemented>
-
-
-
-
-
   <Streamable>Yes</Streamable>
   <pValue>RegMirrorY</pValue>
  </Boolean>
+
+ <Enumeration Name="PtpMode" NameSpace="Custom">
+  <Description>Control the PTP behavior of the Clock port.</Description>
+  <pIsImplemented>RegPtpInq</pIsImplemented>
+  <EnumEntry Name="Off" NameSpace="Custom">
+   <Value>0</Value>
+  </EnumEntry>
+  <EnumEntry Name="Slave" NameSpace="Custom">
+   <Value>1</Value>
+  </EnumEntry>
+  <EnumEntry Name="Master" NameSpace="Custom">
+   <Value>2</Value>
+  </EnumEntry>
+  <EnumEntry Name="Auto" NameSpace="Custom">
+   <Value>3</Value>
+  </EnumEntry>
+  <pValue>RegPtpMode</pValue>
+ </Enumeration>
+
+ <Enumeration Name="PtpStatus" NameSpace="Custom">
+  <Description>What state the PTP operation is in.</Description>
+  <pIsImplemented>RegPtpInq</pIsImplemented>
+  <EnumEntry Name="Initializing" NameSpace="Custom">
+   <Value>0</Value>
+  </EnumEntry>
+  <EnumEntry Name="Faulty" NameSpace="Custom">
+   <Value>1</Value>
+  </EnumEntry>
+  <EnumEntry Name="Disabled" NameSpace="Custom">
+   <Value>2</Value>
+  </EnumEntry>
+  <EnumEntry Name="Listening" NameSpace="Custom">
+   <Value>3</Value>
+  </EnumEntry>
+  <EnumEntry Name="PreMaster" NameSpace="Custom">
+   <Value>4</Value>
+  </EnumEntry>
+  <EnumEntry Name="Master" NameSpace="Custom">
+   <Value>5</Value>
+  </EnumEntry>
+  <EnumEntry Name="Passive" NameSpace="Custom">
+   <Value>6</Value>
+  </EnumEntry>
+  <EnumEntry Name="Uncalibrated" NameSpace="Custom">
+   <Value>7</Value>
+  </EnumEntry>
+  <EnumEntry Name="Slave" NameSpace="Custom">
+   <Value>8</Value>
+  </EnumEntry>
+  <pValue>RegPtpStatus</pValue>
+ </Enumeration>
+ <Integer Name="PtpAcquisitionGateTime" NameSpace="Custom">
+  <Extension>
+   <PvDelete/>
+  </Extension>
+  <pIsImplemented>RegPtpInq</pIsImplemented>
+  <pValue>RegPtpAcqGateTime64</pValue>
+ </Integer>
+
+ <Integer Name="PtpAcquisitionGateTime64" NameSpace="Custom">
+  <pIsImplemented>RegPtpInq</pIsImplemented>
+  <pValue>RegPtpAcqGateTime64</pValue>
+ </Integer>
+
+ <Integer Name="PtpAcquisitionGateTimeHi" NameSpace="Custom">
+  <Extension>
+   <PvCategory Path="/GigE/PTP"/>
+  </Extension>
+  <pIsImplemented>RegPtpInq</pIsImplemented>
+  <pValue>RegPtpAcqGateTimeHi</pValue>
+ </Integer>
+
+ <Integer Name="PtpAcquisitionGateTimeLo" NameSpace="Custom">
+  <Extension>
+   <PvCategory Path="/GigE/PTP"/>
+  </Extension>
+  <pIsImplemented>RegPtpInq</pIsImplemented>
+  <pValue>RegPtpAcqGateTimeLo</pValue>
+ </Integer>
+
+
+
  <Integer Name="WidthMax" NameSpace="Standard">
   <Extension>
    <PvDelete/>
   </Extension>
-
-
 
   <Description>Maximum image width for the current image mode. Horizontal binning, for example, will change this value.</Description>
   <pValue>RegMaxWidth</pValue>
@@ -774,16 +788,13 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvDelete/>
   </Extension>
 
-
-
   <Description>Maximum image height for the current image mode. Vertical binning, for example, will change this value.</Description>
   <pValue>RegMaxHeight</pValue>
  </Integer>
 
  <Enumeration Name="PixelFormat" NameSpace="Standard">
- 
+
   <Description>Format of the image data.</Description>
-  <pIsLocked>TLParamsLocked</pIsLocked>
   <Streamable>Yes</Streamable>
   <EnumEntry Name="Mono8" NameSpace="Standard">
    <pIsImplemented>RegPixelFormatInqMono8</pIsImplemented>
@@ -888,37 +899,43 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pValue>RegPixelFormat</pValue>
  </Enumeration>
 
-
- <Enumeration Name="SensorReadoutMode" NameSpace="Standard">
- 
-  <Description>Readout Mode of the sensor.</Description>
-  <pIsImplemented>RegSensorReadoutModeInq</pIsImplemented>
-  <pIsLocked>TLParamsLocked</pIsLocked>
-  <Streamable>Yes</Streamable>
-  <EnumEntry Name="Readout12Bits" NameSpace="Standard">
-   <Value>0</Value>
-  </EnumEntry>
-  <EnumEntry Name="Readout10Bits" NameSpace="Standard">
-   <Value>1</Value>
-  </EnumEntry>
-  <pValue>RegSensorReadoutMode</pValue>
- </Enumeration>
-
-
  <Integer Name="Width" NameSpace="Standard">
   <Extension>
    <PvCategory Path="ROI"/>
   </Extension>
 
-
-
   <Description>Width of image, in pixels.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegWidth</pValue>
-  <pMin>RegWidthInc</pMin>
+  <pMin>IntWidthMin</pMin>
   <pMax>MaxWidth</pMax>
-  <pInc>RegWidthInc</pInc>
+  <pInc>IntWidthIncrement</pInc>
  </Integer>
+
+ <IntSwissKnife Name="IntWidthMin" NameSpace="Custom">
+  <pVariable Name="FORMAT">RegPixelFormat</pVariable>
+
+
+
+
+
+        <Formula><![CDATA[((FORMAT=35127328) || (FORMAT=34603039) || (FORMAT=34340894) || (FORMAT=6) || (FORMAT=7) || (FORMAT=8)) ? 4 : 2]]></Formula>
+
+
+
+
+    </IntSwissKnife>
+
+ <IntSwissKnife Name="IntWidthIncrement" NameSpace="Custom">
+  <pVariable Name="FORMAT">RegPixelFormat</pVariable>
+
+
+        <Formula>((FORMAT=35127328) || (FORMAT=34603039) || (FORMAT=34340894) || (FORMAT=6) || (FORMAT=7) || (FORMAT=8)) ? 4 : 2</Formula>
+
+
+
+
+        </IntSwissKnife>
 
  <IntSwissKnife Name="MaxWidth" NameSpace="Custom">
   <pVariable Name="VALUE_MAX">RegMaxWidth</pVariable>
@@ -931,14 +948,18 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvCategory Path="ROI"/>
   </Extension>
 
-
-
   <Description>Height of image, in pixels.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegHeight</pValue>
-  <pMin>RegHeightInc</pMin>
+
+
+  <Min>2</Min>
   <pMax>MaxHeight</pMax>
-  <pInc>RegHeightInc</pInc>
+  <Inc>2</Inc>
+
+
+
+
  </Integer>
 
  <IntSwissKnife Name="MaxHeight" NameSpace="Custom">
@@ -952,14 +973,14 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvRename Name="RegionX"/>
    <PvCategory Path="ROI"/>
   </Extension>
- 
+
   <Description>Starting column of the readout region (relative to the first column of the sensor) in pixels.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegRegionX</pValue>
   <Min>0</Min>
   <pMax>OffsetXMax</pMax>
 
-        <pInc>RegWidthInc</pInc>
+        <Inc>2</Inc>
 
     </Integer>
 
@@ -974,14 +995,14 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvRename Name="RegionY"/>
    <PvCategory Path="ROI"/>
   </Extension>
- 
+
   <Description>Starting row of the readout region (relative to the first row of the sensor) in pixels.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegRegionY</pValue>
   <Min>0</Min>
   <pMax>OffsetYMax</pMax>
 
-        <pInc>RegHeightInc</pInc>
+        <Inc>2</Inc>
 
  </Integer>
 
@@ -992,14 +1013,12 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </IntSwissKnife>
 
  <Integer Name="PayloadSize" NameSpace="Standard">
- 
+
   <Description>Maximum size of image block payload.</Description>
   <pValue>RegPayloadSize</pValue>
  </Integer>
 
  <Integer Name="NonImagePayloadSize" NameSpace="Custom">
-
-
 
   <Description>Maximum size of chunk data, not including the image chunk, in the image block payload.</Description>
   <pValue>RegNonImagePayloadSize</pValue>
@@ -1010,8 +1029,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvRename Name="TotalBytesPerFrame"/>
   </Extension>
 
-
-
   <Description>Size of images, in bytes, for the current format and size.</Description>
   <pValue>RegImageSize</pValue>
  </Integer>
@@ -1020,8 +1037,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Command Name="AcquisitionStart" NameSpace="Standard">
 
-
-
   <Description>Start acquisition. Before image acquisition can occur, acquisition must be started, either by a hardware trigger or this software command.</Description>
   <ImposedAccessMode>WO</ImposedAccessMode>
   <pValue>RegAcquisitionCommand</pValue>
@@ -1029,7 +1044,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Command>
 
  <Command Name="AcquisitionStop" NameSpace="Standard">
- 
+
   <Description>Stop acquisition. Acquisition will stop after acquisition of the current frame is complete.</Description>
   <ImposedAccessMode>WO</ImposedAccessMode>
   <pValue>RegAcquisitionCommand</pValue>
@@ -1038,8 +1053,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Command Name="AcquisitionAbort" NameSpace="Standard">
 
-
-
   <Description>Abort acquisition. Acquisition will stop immediately, but a partially transferred image will be completed.</Description>
   <ImposedAccessMode>WO</ImposedAccessMode>
   <pValue>RegAcquisitionCommand</pValue>
@@ -1047,8 +1060,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Command>
 
  <Enumeration Name="AcquisitionMode" NameSpace="Standard">
-
-
 
   <Description>The acquisition mode determines the behavior of the camera when acquisition start is triggered. "Continuous" mode: the camera will acquire images until acquisition stop is triggered. "SingleFrame" mode: the camera will acquire a single image. "MultiFrame" mode: the camera will acquire the number of images specified by AcquisitionFrameCount. "Recorder" mode: the camera will run continuously, and when the recorder event is triggered, send pre-trigger and post-trigger images to the host.</Description>
   <Streamable>Yes</Streamable>
@@ -1072,7 +1083,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Enumeration>
 
  <Integer Name="AcquisitionFrameCount" NameSpace="Standard">
- 
+
   <Description>This is the number of images to acquire when in MultiFrame and Recorder acquisition modes.</Description>
   <pIsImplemented>RegAcquisitionModeInqMultiFrame</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -1082,7 +1093,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="RecorderPreEventCount" NameSpace="Custom">
- 
+
   <Description>This is the number of pre-event images to acquire in the Recorder acquisition mode. This must be less than or equal to AcquisitionFrameCount.</Description>
   <pIsImplemented>RegAcquisitionModeInqRecorder</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -1097,8 +1108,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvCategory Path="Trigger"/>
   </Extension>
 
-
-
   <Description>Frame rate, in frames per second. This is applicable when either the FrameStart trigger mode is disabled, or the FrameStart trigger source is FixedRate. Depending on the exposure duration, the camera may not achieve the frame rate set here.</Description>
   <Streamable>Yes</Streamable>
   <FormulaTo>(1000000 / FROM)</FormulaTo>
@@ -1111,7 +1120,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
- 
+
   <Description>This is the maximum frame rate possible for the current exposure duration and image format.</Description>
   <FormulaTo>(1000000 / FROM)</FormulaTo>
   <FormulaFrom>(1000000 / TO)</FormulaFrom>
@@ -1169,8 +1178,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
-
-
 
   <Description>Select a trigger here, then use the controls {TriggerMode, TriggerSoftware, TriggerSource, TriggerActivation, TriggerOverlap, TriggerDelayAbs} to setup and read the trigger attributes. FrameStart is the trigger which starts each image (when acquisition is running). AcquisitionStart is the trigger which starts the acquisition process.</Description>
   <Streamable>Yes</Streamable>
@@ -1246,8 +1253,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvDelete/>
   </Extension>
 
-
-
   <Description>Enable or disable this trigger. Note: when the FrameStart trigger is disabled, images are triggered at a fixed rate specified by AcquisitionFrameRateAbs.</Description>
   <Streamable>Yes</Streamable>
   <EnumEntry Name="Off" NameSpace="Standard">
@@ -1260,7 +1265,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Enumeration>
 
  <Command Name="TriggerSoftware" NameSpace="Standard">
- 
+
   <Description>This software command effects a trigger.</Description>
   <pIsImplemented>RegTriggerSourceInqSoftware</pIsImplemented>
   <ImposedAccessMode>WO</ImposedAccessMode>
@@ -1277,8 +1282,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
-
-
 
   <Description>Source of trigger, when TriggerMode is On. This might be an hardware trigger, a fixed rate generator, or software trigger only.</Description>
   <Streamable>Yes</Streamable>
@@ -1392,8 +1395,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Enumeration Name="TriggerActivation" NameSpace="Standard">
 
-
-
   <Description>Type of activation, for hardware triggers. This controls edge/level and polarity sensitivities.</Description>
   <pIsImplemented>RegTriggerInqEvent</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -1431,8 +1432,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Enumeration Name="TriggerOverlap" NameSpace="Standard">
 
-
-
   <Description>Permitted window of trigger activation, relative to previous frame.</Description>
   <pIsImplemented>RegTriggerInqOverlap</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -1455,8 +1454,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
-
-
 
   <Description>Delay from hardware trigger activation to trigger effect, in microseconds.</Description>
   <pIsImplemented>RegTriggerInqDelay</pIsImplemented>
@@ -1513,8 +1510,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Integer Name="DSPSubregionLeft" NameSpace="Custom">
 
-
-
   <Description>The DSP subregion is the area of the image used for measurements in "auto-" functions such as auto-exposure and auto-gain. DSPSubregionLeft is the left column, relative to the current image region.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegDSPSubregionLeft</pValue>
@@ -1527,8 +1522,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </IntSwissKnife>
 
  <Integer Name="DSPSubregionRight" NameSpace="Custom">
-
-
 
   <Description>The DSP subregion is the area of the image used for measurements in "auto-" functions such as auto-exposure and auto-gain. DSPSubregionRight is the right column, relative to the current image region. For convenience, this value may be higher than the maximum Width.</Description>
   <Streamable>Yes</Streamable>
@@ -1544,8 +1537,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Integer Name="DSPSubregionTop" NameSpace="Custom">
 
-
-
   <Description>The DSP subregion is the area of the image used for measurements in "auto-" functions such as auto-exposure and auto-gain. DSPSubregionTop is the top row, relative to the current image region.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegDSPSubregionTop</pValue>
@@ -1558,8 +1549,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </IntSwissKnife>
 
  <Integer Name="DSPSubregionBottom" NameSpace="Custom">
-
-
 
   <Description>The DSP subregion is the area of the image used for measurements in "auto-" functions such as auto-exposure and auto-gain. DSPSubregionBottom is the bottom row, relative to the current image region. For convenience, this value may be higher than the maximum Height.</Description>
   <Streamable>Yes</Streamable>
@@ -1578,8 +1567,8 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvCategory Path="/Controls/Exposure"/>
    <PvRename Name="ExposureMode"/>
   </Extension>
-  <Description>Method of control for exposure duration. Timed: exposure duration is set by ExposureValue. AutoOnce: auto-exposure occurs until target is achieved, then ExposureMode returns to Timed. Auto: auto-exposure always runs. TriggerWidth: exposure controlled by external trigger pulse.</Description>
 
+  <Description>Method of control for exposure duration. Timed: exposure duration is set by ExposureValue. AutoOnce: auto-exposure occurs until target is achieved, then ExposureMode returns to Timed. Auto: auto-exposure always runs. TriggerWidth: exposure controlled by external trigger pulse. PieceWiseLinearHDR: Exposures defined by ExposureValue and knee points via ExposureValuePWL1, ExposureValuePWL2. InterleavedHDR: ExposureValue for odd rows and ExposureValueInterleaved for even rows. BracketHDR: Exposures for 3 consecutive frames defined by ExposureValue, ExposureValueBracket1, ExposureValueBracket2 respectively.</Description>
   <EnumEntry Name="Timed" NameSpace="Standard">
             <Extension>
                 <PvRename Name="Manual"/>
@@ -1610,8 +1599,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvDelete/>
   </Extension>
 
-
-
   <Description>Method used to set exposure duration, ExposureTimeAbs in Timed mode. Off: automatic mode is off. Once: auto-exposure occurs until target is achieved, then ExposureAuto returns to Off. Continuous: auto-exposure always runs.</Description>
   <Streamable>Yes</Streamable>
   <EnumEntry Name="Off" NameSpace="Standard">
@@ -1634,14 +1621,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvDelete/>
   </Extension>
 
-
-
-
-
-
- 
-  <Description>Method of control for exposure duration. Timed: exposure duration is set by ExposureTimeAbs. TriggerWidth: exposure controlled by external trigger pulse.</Description>
-
+  <Description>Method of control for exposure duration. Timed: exposure duration is set by ExposureTimeAbs. TriggerWidth: exposure controlled by external trigger pulse. PieceWiseLinearHDR: Exposures defined by ExposureTimeAbs and knee points via ExposureTimePWL1, ExposureTimePWL2. InterleavedHDR: ExposureTimeAbs for odd rows and ExposureTimeInterleaved for even rows. BracketHDR: Exposures for 3 consecutive frames defined by ExposureTimeAbs, ExposureTimeBracket1, ExposureTimeBracket2 respectively.</Description>
   <EnumEntry Name="Timed" NameSpace="Standard">
    <pIsImplemented>RegExposureModeInqTimedManual</pIsImplemented>
    <Value>0</Value>
@@ -1658,14 +1638,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvDelete/>
   </Extension>
 
-
-
-
-
-
- 
-  <Description>Exposure duration in microseconds. Timed: Sensor integration time. TriggerWidth: Ignored.</Description>
-
+  <Description>Exposure duration in microseconds. Timed: Sensor integration time. TriggerWidth: Ignored. PieceWiseLinearHDR: Full sensor integration time. See ExposureTimePWL1, ExposureTimePWL2, ThresholdPWL1, ThresholdPWL2 for knee point definitions. InterleavedHDR: Exposure time for odd rows. See ExposureTimeInterleaved for even rows exposure. BracketHDR: Exposure time for the first among 3 consecutive frames. See ExposureTimeBracket1, ExposureTimeBracket2 for second and third frames exposures.</Description>
   <Streamable>Yes</Streamable>
   <pValue>ExposureValueFloat</pValue>
   <pMin>ExposureValueMinFloat</pMin>
@@ -1687,22 +1660,19 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvCategory Path="/Controls/Exposure"/>
   </Extension>
-  <Description>Exposure duration, in microseconds. Timed: Sensor integration time. TriggerWidth: Ignored.</Description>
 
+  <Description>Exposure duration, in microseconds. Timed: Sensor integration time. TriggerWidth: Ignored. PieceWiseLinearHDR: Full sensor integration time. See ExposureValuePWL1, ExposureValuePWL2, ThresholdPWL1, ThresholdPWL2 for knee point definitions. InterleavedHDR: Exposure time for odd rows. See ExposureValuePWL1 for even rows exposure. BracketHDR: Exposure time for the first among 3 consecutive frames. See ExposureValuePWL1, ExposureValuePWL2 for second and third frames exposures.</Description>
   <pValue>RegExposureValue</pValue>
   <pMin>RegExposureValueMin</pMin>
   <pMax>RegExposureValueMax</pMax>
   <Representation>Logarithmic</Representation>
  </Integer>
-
  <Converter Name="ExposureValueFloat" NameSpace="Custom">
   <FormulaTo>(1 * FROM)</FormulaTo>
   <FormulaFrom>(1 * TO)</FormulaFrom>
   <pValue>RegExposureValue</pValue>
   <Slope>Increasing</Slope>
  </Converter>
-
-
  <SwissKnife Name="ExposureValueMinFloat" NameSpace="Custom">
   <pVariable Name="VALUE">RegExposureValueMin</pVariable>
   <Formula>(1 * VALUE)</Formula>
@@ -1714,8 +1684,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </SwissKnife>
  <Integer Name="ExposureAutoTarget" NameSpace="Custom">
 
-
-
   <Description>When ExposureAutoAlg is Mean, this is the target image mean value, in percent. Higher values result in brighter images.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegExposureAutoTarget</pValue>
@@ -1724,7 +1692,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Enumeration Name="ExposureAutoAlg" NameSpace="Custom">
- 
+
   <Description>Algorithm used for auto-exposure. Mean: target a particular mean value of all measured pixels in the image. FitRange: adjust the maximum pixel value to fit the sensor range.</Description>
   <Streamable>Yes</Streamable>
   <EnumEntry Name="Mean" NameSpace="Custom">
@@ -1740,8 +1708,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Integer Name="ExposureAutoMin" NameSpace="Custom">
 
-
-
   <Description>Minimum auto-exposure value, in microseconds.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegExposureAutoMin</pValue>
@@ -1750,8 +1716,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="ExposureAutoMax" NameSpace="Custom">
-
-
 
   <Description>Maximum auto-exposure value, in microseconds.</Description>
   <Streamable>Yes</Streamable>
@@ -1762,8 +1726,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Integer Name="ExposureAutoRate" NameSpace="Custom">
 
-
-
   <Description>Rate of exposure adjustments, from 1 (slowest) to 100 (fastest). Use this control to slow down the auto-exposure adjustments.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegExposureAutoRate</pValue>
@@ -1772,7 +1734,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="ExposureAutoOutliers" NameSpace="Custom">
- 
+
   <Description>Number of upper outliers to discard before calculating exposure adjustments. This is in ten-thousandths of the number pixels in the image.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegExposureAutoOutliers</pValue>
@@ -1781,8 +1743,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="ExposureAutoAdjustTol" NameSpace="Custom">
-
-
 
   <Description>Tolerance, in percent, allowed from the ideal exposure value, within which the auto-exposure does not run. This prevents needless small adjustments from occurring each image.</Description>
   <Streamable>Yes</Streamable>
@@ -1804,7 +1764,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
- 
+
   <Description>(GenICam boilerplate. Always All.)</Description>
   <EnumEntry Name="All" NameSpace="Standard">
    <Value>0</Value>
@@ -1812,7 +1772,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Value>0</Value>
 
   <pSelected>Gain</pSelected>
-  <pSelected>GainRaw</pSelected>
 
 
 
@@ -1825,7 +1784,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
- 
+
   <Description>Gain value of analog A/D stage. Units are usually in dB.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegGainValueFloat</pValue>
@@ -1839,17 +1798,8 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvCategory Path="Controls/Gain"/>
    <PvRename Name="GainValue"/>
   </Extension>
- 
-  <Description>Gain value of analog A/D stage. Units are usually in dB.</Description>
-  <Streamable>Yes</Streamable>
-  <pValue>RegGainValue</pValue>
-  <pMin>RegGainValueMin</pMin>
-  <pMax>RegGainValueMax</pMax>
- </Integer>
 
- <Integer Name="GainRaw" NameSpace="Custom">
   <Description>Gain value of analog A/D stage. Units are usually in dB.</Description>
-  <Visibility>Invisible</Visibility>
   <Streamable>Yes</Streamable>
   <pValue>RegGainValue</pValue>
   <pMin>RegGainValueMin</pMin>
@@ -1859,8 +1809,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="GainMode"/>
   </Extension>
-
-
 
   <Description>Method used to set Gain. Off: automatic mode is off. Once: auto-gain occurs until target is achieved, then GainAuto returns to Off. Continuous: auto-gain always runs.</Description>
   <Streamable>Yes</Streamable>
@@ -1890,8 +1838,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Integer Name="GainAutoTarget" NameSpace="Custom">
 
-
-
   <Description>This is the target image mean value, in percent.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegGainAutoTarget</pValue>
@@ -1905,7 +1851,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
- 
+
   <Description>Minimum auto-gain value.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegGainAutoMinFloat</pValue>
@@ -1917,7 +1863,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
- 
+
   <Description>Maximum auto-gain value.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegGainAutoMaxFloat</pValue>
@@ -1931,7 +1877,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvCategory Path="/Controls/Gain/Auto"/>
    <PvRename Name="GainAutoMin"/>
   </Extension>
- 
+
   <Description>Minimum auto-gain value.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegGainAutoMin</pValue>
@@ -1944,7 +1890,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvCategory Path="/Controls/Gain/Auto"/>
    <PvRename Name="GainAutoMax"/>
   </Extension>
- 
+
   <Description>Maximum auto-gain value.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegGainAutoMax</pValue>
@@ -1952,8 +1898,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pMax>RegGainValueMax</pMax>
  </Integer>
  <Integer Name="GainAutoRate" NameSpace="Custom">
-
-
 
   <Description>Rate of gain adjustments, from 1 (slowest) to 100 (fastest). Use this control to slow down the auto-gain adjustments.</Description>
   <Streamable>Yes</Streamable>
@@ -1963,7 +1907,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="GainAutoOutliers" NameSpace="Custom">
- 
+
   <Description>Number of upper outliers to discard before calculating gain adjustments. This is in ten-thousandths of the number pixels in the image.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegGainAutoOutliers</pValue>
@@ -1972,8 +1916,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="GainAutoAdjustTol" NameSpace="Custom">
-
-
 
   <Description>Tolerance, in percent, allowed from the ideal gain value, within which the auto-gain does not run. This prevents needless small adjustments from occurring each image.</Description>
   <Streamable>Yes</Streamable>
@@ -1986,7 +1928,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
- 
+
   <Description>Select the Red or Blue channel to adjust with BalanceRatioAbs.</Description>
   <pIsImplemented>RegWhitebalInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -2008,7 +1950,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
- 
+
   <Description>Adjust the gain of the red or blue channel (see BalanceRatioSelector). The green channel gain is always 1.00.</Description>
   <pIsImplemented>RegWhitebalInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -2039,8 +1981,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvRename Name="WhitebalMode"/>
   </Extension>
 
-
-
   <Description>Method used to set White Balance values. Off: automatic mode is off. Once: auto-whitebalance occurs until target is achieved, then BalanceWhiteAuto returns to Off. Continuous: auto-whitebalance always runs.</Description>
   <pIsImplemented>RegWhitebalInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -2070,8 +2010,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvRename Name="WhitebalAutoRate"/>
   </Extension>
 
-
-
   <Description>Rate of white balance adjustments, from 1 (slowest) to 100 (fastest). Use this control to slow down the auto-whitebalance adjustments.</Description>
   <pIsImplemented>RegWhitebalInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -2085,8 +2023,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvRename Name="WhitebalAutoAdjustTol"/>
   </Extension>
 
-
-
   <Description>Tolerance, in percent, allowed from the ideal whitebalance values, within which the auto-whitebalance does not run. This prevents needless small adjustments from occurring each image.</Description>
   <pIsImplemented>RegWhitebalInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -2099,7 +2035,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
- 
+
   <Description>Selects which Black Level is controlled by the various Black Level features.</Description>
   <pIsImplemented>RegOffsetInq</pIsImplemented>
   <EnumEntry Name="All" NameSpace="Standard">
@@ -2112,7 +2048,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvDelete/>
   </Extension>
- 
+
   <Description>Black level (offset) value.</Description>
   <pIsImplemented>RegOffsetInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -2126,7 +2062,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvCategory Path="Controls/Offset"/>
   </Extension>
- 
+
   <Description>Black level (offset) value.</Description>
   <pIsImplemented>RegOffsetInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -2136,7 +2072,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Enumeration Name="IrisMode" NameSpace="Custom">
- 
+
   <Description>Set the iris mode. Disabled: no iris control. Video: enable video iris. VideoOpen: fully open a video iris. VideoClose: fully close a video iris.</Description>
   <pIsImplemented>RegIrisInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -2172,8 +2108,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Integer Name="IrisAutoTarget" NameSpace="Custom">
 
-
-
   <Description>This is the target image mean value, in percent.</Description>
   <pIsImplemented>RegIrisInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -2183,8 +2117,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="IrisVideoLevel" NameSpace="Custom">
-
-
 
   <Description>Current video-iris level, in approximately mV pp; read only. When calibrating a video lens, this value should fall between IrisVideoLevelMin and IrisVideoLevelMax.</Description>
   <pIsImplemented>RegIrisInq</pIsImplemented>
@@ -2196,8 +2128,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Integer Name="IrisVideoLevelMin" NameSpace="Custom">
 
-
-
   <Description>Minimum video iris level output by the camera, in approximately mV pp. A higher minimum value slows the adjustment time but prevents excessive overshoot.</Description>
   <pIsImplemented>RegVideoIrisInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -2207,8 +2137,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="IrisVideoLevelMax" NameSpace="Custom">
-
-
 
   <Description>Maximum video iris level output by the camera, in approximately mV pp. A lower minimum value slows the adjustment time but prevents excessive overshoot.</Description>
   <pIsImplemented>RegVideoIrisInq</pIsImplemented>
@@ -2252,11 +2180,9 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
 
  <Enumeration Name="DefectMaskColumnEnable" NameSpace="Custom">
- 
+
   <Description>Enable masking of defective columns. Defective columns are detected and recorded at the factory.</Description>
-  <Visibility>Invisible</Visibility>
   <pIsImplemented>RegDefectMaskColumnInq</pIsImplemented>
-  <pIsAvailable>RegDefectMaskAvailable</pIsAvailable>
   <Streamable>Yes</Streamable>
   <EnumEntry Name="Disabled" NameSpace="Custom">
    <Value>0</Value>
@@ -2269,12 +2195,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Boolean Name="DefectMaskEnable" NameSpace="Custom">
 
- 
   <Description>Enable masking of defective pixel clusters. Defective pixels are detected and recorded at the factory.</Description>
-
-
-
-
   <pIsImplemented>RegDefectMaskInq</pIsImplemented>
   <pIsAvailable>RegDefectMaskAvailable</pIsAvailable>
   <Streamable>Yes</Streamable>
@@ -2284,7 +2205,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Boolean>
 
  <Integer Name="VsubValue" NameSpace="Custom">
- 
+
   <Description>Substrate voltage in mV.</Description>
   <pIsImplemented>RegVsubInq</pIsImplemented>
 
@@ -2301,6 +2222,69 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pIsImplemented>RegStatusTemperatureInq</pIsImplemented>
   <pValue>RegTemperature</pValue>
  </Float>
+
+ <Integer Name="LensVoltage" NameSpace="Custom">
+
+  <Description>Lens power supply voltage in mV. See LensVoltageControl feature to set value.</Description>
+  <pIsImplemented>RegLensControlInqVoltage</pIsImplemented>
+  <Streamable>Yes</Streamable>
+  <pValue>RegLensVoltage</pValue>
+  <Min>0</Min>
+  <pMax>RegLensVoltageMax</pMax>
+ </Integer>
+
+ <Integer Name="LensVoltageControl" NameSpace="Custom">
+
+  <Description>Lens power supply voltage control. Set value as mV * 100001. If a bad value is written, this control resets to zero.</Description>
+  <pIsImplemented>RegLensControlInqVoltage</pIsImplemented>
+  <Streamable>Yes</Streamable>
+  <pValue>RegLensVoltageControl</pValue>
+ </Integer>
+
+ <Enumeration Name="LensDriveCommand" NameSpace="Custom">
+
+  <Description>Lens drive command.</Description>
+  <pIsImplemented>RegLensControlInqDrive</pIsImplemented>
+  <Streamable>Yes</Streamable>
+  <EnumEntry Name="Stop" NameSpace="Custom">
+   <Value>0</Value>
+  </EnumEntry>
+  <EnumEntry Name="IrisTimedOpen" NameSpace="Custom">
+   <pIsImplemented>RegLensDriveInqIrisTimedOpen</pIsImplemented>
+   <Value>1</Value>
+  </EnumEntry>
+  <EnumEntry Name="IrisTimedClose" NameSpace="Custom">
+   <pIsImplemented>RegLensDriveInqIrisTimedClose</pIsImplemented>
+   <Value>2</Value>
+  </EnumEntry>
+  <EnumEntry Name="FocusTimedNear" NameSpace="Custom">
+   <pIsImplemented>RegLensDriveInqFocusTimedNear</pIsImplemented>
+   <Value>3</Value>
+  </EnumEntry>
+  <EnumEntry Name="FocusTimedFar" NameSpace="Custom">
+   <pIsImplemented>RegLensDriveInqFocusTimedFar</pIsImplemented>
+   <Value>4</Value>
+  </EnumEntry>
+  <EnumEntry Name="ZoomTimedIn" NameSpace="Custom">
+   <pIsImplemented>RegLensDriveInqZoomTimedIn</pIsImplemented>
+   <Value>5</Value>
+  </EnumEntry>
+  <EnumEntry Name="ZoomTimedOut" NameSpace="Custom">
+   <pIsImplemented>RegLensDriveInqZoomTimedOut</pIsImplemented>
+   <Value>6</Value>
+  </EnumEntry>
+  <pValue>RegLensDriveCmd</pValue>
+ </Enumeration>
+ <Integer Name="LensDriveDuration" NameSpace="Custom">
+
+  <Description>Duration of timed lens commands, in milliseconds.</Description>
+  <pIsImplemented>RegLensControlInqDrive</pIsImplemented>
+  <Streamable>Yes</Streamable>
+  <pValue>RegLensDriveDuration</pValue>
+  <Min>0</Min>
+  <pMax>RegLensDriveDurationMax</pMax>
+ </Integer>
+
     <Float Name="Hue" NameSpace="Custom">
         <ToolTip>Hue turns the color vectors in the U/V plane. It is 1 degree per step.</ToolTip>
         <Description>Hue turns the color vectors in the U/V plane. It is 1 degree per step.</Description>
@@ -2326,7 +2310,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
         <Extension>
             <PvDelete/>
         </Extension>
- 
+
   <Description>Selects which Color Transformation module is controlled by the various Color Transformation features.</Description>
         <Visibility>Beginner</Visibility>
   <pIsImplemented>RegColorTransformationInq</pIsImplemented>
@@ -2358,7 +2342,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
     </Enumeration>
 
     <Enumeration Name="ColorTransformationValueSelector" NameSpace="Standard">
- 
+
   <Description>Selects the Gain factor or Offset of the Transformation matrix to access in the selected Color Transformation module.</Description>
         <Visibility>Beginner</Visibility>
   <pIsImplemented>RegColorTransformationInq</pIsImplemented>
@@ -2446,7 +2430,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
     </Float>
 
  <Category Name="LUTControl" NameSpace="Standard">
- 
+
   <Description>Category that includes the LUT control features.</Description>
   <DisplayName>LUTControl</DisplayName>
   <Visibility>Expert</Visibility>
@@ -2463,7 +2447,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Category>
 
  <Enumeration Name="LUTSelector" NameSpace="Standard">
- 
+
   <Description>Selects which look up table is used.</Description>
   <DisplayName>LUTSelector</DisplayName>
   <Visibility>Expert</Visibility>
@@ -2527,7 +2511,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </IntSwissKnife>
 
  <Category Name="LUTInfo" NameSpace="Custom">
- 
+
   <Description>Category that includes the LUT info features for the look up table.</Description>
   <DisplayName>LUTInfo</DisplayName>
   <Visibility>Guru</Visibility>
@@ -2540,7 +2524,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Category>
 
  <Integer Name="LUTBitDepthIn" NameSpace="Custom">
- 
+
   <Description>Bit length of the input value of the look up table block</Description>
   <DisplayName>LUTBitLengthIn</DisplayName>
   <Visibility>Guru</Visibility>
@@ -2550,7 +2534,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="LUTBitDepthOut" NameSpace="Custom">
- 
+
   <Description>Bit length of the output value of the look up table block</Description>
   <DisplayName>LUTBitLengthOut</DisplayName>
   <Visibility>Guru</Visibility>
@@ -2560,7 +2544,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="LUTAddress" NameSpace="Custom">
- 
+
   <Description>Address of the memory area where the selected LUT is located (for raw memory transfer)</Description>
   <DisplayName>LUTAddress</DisplayName>
   <Visibility>Guru</Visibility>
@@ -2570,7 +2554,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="LUTSizeBytes" NameSpace="Custom">
- 
+
   <Description>Size of the memory area where the LUT is located</Description>
   <DisplayName>LUTSize</DisplayName>
   <Visibility>Guru</Visibility>
@@ -2580,7 +2564,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Enumeration Name="LUTMode" NameSpace="Custom">
- 
+
   <Description>Selects which mode is used for the selected look up table.</Description>
   <DisplayName>LUTMode</DisplayName>
   <Visibility>Expert</Visibility>
@@ -2610,7 +2594,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Enumeration>
 
  <Boolean Name="LUTEnable" NameSpace="Standard">
- 
+
   <Description>Activates the selected LUT.</Description>
   <DisplayName>LUTEnable</DisplayName>
   <Visibility>Expert</Visibility>
@@ -2621,7 +2605,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Boolean>
 
  <Integer Name="LUTIndex" NameSpace="Standard">
- 
+
   <Description>Control the index of the coefficient to access in the selected look up table.</Description>
   <DisplayName>LUTIndex</DisplayName>
   <Visibility>Guru</Visibility>
@@ -2639,7 +2623,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </IntSwissKnife>
 
  <Integer Name="LUTValue" NameSpace="Standard">
- 
+
   <Description>Returns the Value at entry LUTIndex of the selected look up table</Description>
   <DisplayName>LUTValue</DisplayName>
   <Visibility>Guru</Visibility>
@@ -2656,7 +2640,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </IntSwissKnife>
 
  <Command Name="LUTLoadAll" NameSpace="Custom">
- 
+
   <Description>Load all look up tables from Flash.</Description>
   <pIsImplemented>RegLutInq</pIsImplemented>
   <ImposedAccessMode>WO</ImposedAccessMode>
@@ -2665,7 +2649,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Command>
 
  <Command Name="LUTSaveAll" NameSpace="Custom">
- 
+
   <Description>Save all look up tables in Flash.</Description>
   <pIsImplemented>RegLutInq</pIsImplemented>
   <ImposedAccessMode>WO</ImposedAccessMode>
@@ -2676,7 +2660,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvCategory Path="/IO"/>
   </Extension>
- 
+
   <Description>Momentary logic levels of the hardware line inputs.</Description>
   <pValue>RegSyncInLevels</pValue>
  </Integer>
@@ -2687,14 +2671,12 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvCategory Path="/IO"/>
   </Extension>
 
-
-
   <Description>Output levels of hardware sync outputs, for output(s) in GPO mode. (Note: SyncOutPolarity can invert these values.)</Description>
   <pValue>RegSyncOutLevels</pValue>
  </Integer>
 
  <Enumeration Name="SyncInSelector" NameSpace="Custom">
- 
+
   <Description>Select the sync-in line to control with {SyncInGlitchFilter}.</Description>
   <Streamable>Yes</Streamable>
   <EnumEntry Name="SyncIn1">
@@ -2735,8 +2717,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
  <Integer Name="SyncInGlitchFilter" NameSpace="Custom">
 
-
-
   <Description>Glitch filter on sync-in line, in nanoseconds.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegSyncInGlitchFilter</pValue>
@@ -2744,8 +2724,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Enumeration Name="SyncOutSelector" NameSpace="Custom">
-
-
 
   <Description>Select the sync-out line to control with {SyncOutSource, SyncOutPolarity}.</Description>
   <Streamable>Yes</Streamable>
@@ -2791,7 +2769,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Enumeration Name="SyncOutSource" NameSpace="Custom">
- 
+
   <Description>Signal source of the sync-out line specified by SyncOutSelector. GPO: general purpose output. AcquisitionTriggerReady: acquisition trigger may occur. FrameTriggerReady: frame trigger may occur. Exposing: exposure in progress. FrameReadout: image readout in progress. Imaging: exposure or frame readout in progress. Acquiring: acquisition is running. LineIn: external line input. Strobe: source is strobe timing unit.</Description>
   <Streamable>Yes</Streamable>
   <EnumEntry Name="GPO" NameSpace="Custom">
@@ -2836,7 +2814,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Enumeration>
 
  <Enumeration Name="SyncOutPolarity" NameSpace="Custom">
- 
+
   <Description>Polarity applied to the sync-out line specified by SyncOutSelector.</Description>
   <Streamable>Yes</Streamable>
   <EnumEntry Name="Normal" NameSpace="Custom">
@@ -2859,7 +2837,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvRename Name="Strobe1Mode"/>
    <PvCategory Path="1"/>
   </Extension>
- 
+
   <Description>Signal source of the strobe timing unit. See SyncOutSource for descriptions.</Description>
   <Streamable>Yes</Streamable>
   <EnumEntry Name="AcquisitionTriggerReady" NameSpace="Custom">
@@ -2904,7 +2882,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvRename Name="Strobe1ControlledDuration"/>
    <PvCategory Path="1"/>
   </Extension>
- 
+
   <Description>Mode of the strobe timing unit. Source: strobe duration is the same as source duration. Controlled: strobe duration is set by StrobeDuration.</Description>
   <Streamable>Yes</Streamable>
   <EnumEntry Name="Source" NameSpace="Custom">
@@ -2928,8 +2906,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvCategory Path="1"/>
   </Extension>
 
-
-
   <Description>Delay from strobe trigger to strobe output, in microseconds.</Description>
   <Streamable>Yes</Streamable>
   <pValue>RegStrobe1Delay</pValue>
@@ -2942,8 +2918,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <PvRename Name="Strobe1Duration"/>
    <PvCategory Path="1"/>
   </Extension>
-
-
 
   <Description>Duration of strobe, in microseconds.</Description>
   <Streamable>Yes</Streamable>
@@ -2958,8 +2932,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="ConfigFileIndex"/>
   </Extension>
-
-
 
   <Description>Select a user set, for loading or saving camera parameters.</Description>
   <pIsImplemented>RegMemoryFileInq</pIsImplemented>
@@ -3014,7 +2986,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="ConfigFileLoad"/>
   </Extension>
- 
+
   <Description>Load camera parameters from the user set specified by UserSetSelector.</Description>
   <pIsImplemented>RegMemoryFileInq</pIsImplemented>
         <pIsLocked>TLParamsLocked</pIsLocked>
@@ -3026,7 +2998,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="ConfigFileSave"/>
   </Extension>
- 
+
   <Description>Save camera parameters to the user set specified by UserSetSelector.</Description>
   <pIsImplemented>RegMemoryFileInq</pIsImplemented>
         <pIsLocked>TLParamsLocked</pIsLocked>
@@ -3039,8 +3011,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="ConfigFilePowerUp"/>
   </Extension>
-
-
 
   <Description>On power-up or reset, this user set is loaded.</Description>
   <pIsImplemented>RegMemoryFileInq</pIsImplemented>
@@ -3117,7 +3087,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
 
  <Enumeration Name="EventSelector" NameSpace="Standard">
- 
+
   <Description>Activate event-notification on the GigE Vision message channel.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -3140,6 +3110,14 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <EnumEntry Name="AcquisitionRecordTrigger" NameSpace="Custom">
    <pIsImplemented>RegEventInqRecTrig</pIsImplemented>
    <Value>40004</Value>
+  </EnumEntry>
+  <EnumEntry Name="PtpSyncLost" NameSpace="Custom">
+   <pIsImplemented>RegEventTimeSync</pIsImplemented>
+   <Value>40005</Value>
+  </EnumEntry>
+  <EnumEntry Name="PtpSyncLocked" NameSpace="Custom">
+   <pIsImplemented>RegEventTimeSync</pIsImplemented>
+   <Value>40006</Value>
   </EnumEntry>
   <EnumEntry Name="Line1RisingEdge" NameSpace="Standard">
    <Extension>
@@ -3208,12 +3186,13 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
    <pIsImplemented>RegEventInqExposureStart</pIsImplemented>
    <Value>40019</Value>
   </EnumEntry>
+
   <pValue>RegEventGenicamSelector</pValue>
   <pSelected>EventNotification</pSelected>
  </Enumeration>
 
  <Enumeration Name="EventNotification" NameSpace="Standard">
- 
+
   <Description>Activate event-notification on the GigE Vision message channel.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -3227,7 +3206,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Enumeration>
 
  <Integer Name="EventsEnable1" NameSpace="Custom">
- 
+
   <Description>Activate event-notification on the GigE Vision message channel. For programmers. See register documentation.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <Streamable>Yes</Streamable>
@@ -3235,7 +3214,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="EventAcquisitionStart" NameSpace="Standard">
- 
+
   <Description>ID value of event.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <ImposedAccessMode>RO</ImposedAccessMode>
@@ -3243,7 +3222,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="EventAcquisitionEnd" NameSpace="Standard">
- 
+
   <Description>ID value of event.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <ImposedAccessMode>RO</ImposedAccessMode>
@@ -3251,7 +3230,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="EventFrameTrigger" NameSpace="Standard">
- 
+
   <Description>ID value of event.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <ImposedAccessMode>RO</ImposedAccessMode>
@@ -3259,7 +3238,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="EventExposureEnd" NameSpace="Standard">
- 
+
   <Description>ID value of event.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <ImposedAccessMode>RO</ImposedAccessMode>
@@ -3267,17 +3246,32 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="EventAcquisitionRecordTrigger" NameSpace="Custom">
- 
+
   <Description>ID value of event.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <ImposedAccessMode>RO</ImposedAccessMode>
   <Value>40004</Value>
  </Integer>
+
+ <Integer Name="EventPtpSyncLost" NameSpace="Custom">
+  <Description>Camera has lost synchronization to the master clock.</Description>
+  <pIsImplemented>RegEventNotificationInq</pIsImplemented>
+  <ImposedAccessMode>RO</ImposedAccessMode>
+  <Value>40005</Value>
+ </Integer>
+
+ <Integer Name="EventPtpSyncLocked" NameSpace="Custom">
+  <Description>Camera has acquired synchronization to the master clock.</Description>
+  <pIsImplemented>RegEventNotificationInq</pIsImplemented>
+  <ImposedAccessMode>RO</ImposedAccessMode>
+  <Value>40006</Value>
+ </Integer>
+
  <Integer Name="EventLine1RisingEdge" NameSpace="Standard">
   <Extension>
    <PvRename Name="EventSyncIn1Rise"/>
   </Extension>
- 
+
   <Description>ID value of event.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <ImposedAccessMode>RO</ImposedAccessMode>
@@ -3288,19 +3282,18 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="EventSyncIn1Fall"/>
   </Extension>
- 
+
   <Description>ID value of event.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <ImposedAccessMode>RO</ImposedAccessMode>
   <Value>40011</Value>
  </Integer>
 
-
  <Integer Name="EventLine2RisingEdge" NameSpace="Standard">
   <Extension>
    <PvRename Name="EventSyncIn2Rise"/>
   </Extension>
- 
+
   <Description>ID value of event.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <ImposedAccessMode>RO</ImposedAccessMode>
@@ -3311,12 +3304,57 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="EventSyncIn2Fall"/>
   </Extension>
- 
+
   <Description>ID value of event.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <ImposedAccessMode>RO</ImposedAccessMode>
   <Value>40013</Value>
  </Integer>
+
+ <Integer Name="EventLine3RisingEdge" NameSpace="Standard">
+  <Extension>
+   <PvRename Name="EventSyncIn3Rise"/>
+  </Extension>
+
+  <Description>ID value of event.</Description>
+  <pIsImplemented>RegEventNotificationInq</pIsImplemented>
+  <ImposedAccessMode>RO</ImposedAccessMode>
+  <Value>40014</Value>
+ </Integer>
+
+ <Integer Name="EventLine3FallingEdge" NameSpace="Standard">
+  <Extension>
+   <PvRename Name="EventSyncIn3Fall"/>
+  </Extension>
+
+  <Description>ID value of event.</Description>
+  <pIsImplemented>RegEventNotificationInq</pIsImplemented>
+  <ImposedAccessMode>RO</ImposedAccessMode>
+  <Value>40015</Value>
+ </Integer>
+
+ <Integer Name="EventLine4RisingEdge" NameSpace="Standard">
+  <Extension>
+   <PvRename Name="EventSyncIn4Rise"/>
+  </Extension>
+
+  <Description>ID value of event.</Description>
+  <pIsImplemented>RegEventNotificationInq</pIsImplemented>
+  <ImposedAccessMode>RO</ImposedAccessMode>
+  <Value>40016</Value>
+ </Integer>
+
+ <Integer Name="EventLine4FallingEdge" NameSpace="Standard">
+  <Extension>
+   <PvRename Name="EventSyncIn4Fall"/>
+  </Extension>
+
+  <Description>ID value of event.</Description>
+  <pIsImplemented>RegEventNotificationInq</pIsImplemented>
+  <ImposedAccessMode>RO</ImposedAccessMode>
+  <Value>40017</Value>
+ </Integer>
+
     <Integer Name="EventFrameTriggerReady" NameSpace="Standard">
         <ToolTip>ID value of event.</ToolTip>
         <Description>ID value of Frame Trigger Ready event. The Frame Trigger event occurs when the camera is ready for another frame aquisition</Description>
@@ -3329,15 +3367,14 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="EventExposureStart"/>
   </Extension>
- 
+
   <Description>ID value of event.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
   <ImposedAccessMode>RO</ImposedAccessMode>
   <Value>40019</Value>
  </Integer>
+
  <Integer Name="EventOverflow" NameSpace="Standard">
-
-
 
   <Description>ID value of overflow event. The overflow event occurs when one or more notification events are lost on the camera. If you use the message channel for event notification, you are always subscribed to this event.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
@@ -3346,8 +3383,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </Integer>
 
  <Integer Name="EventError" NameSpace="Standard">
-
-
 
   <Description>ID value of error event. The error event occurs if there is a problem on the camera; this event should be reported to technical support. If you use the message channel for event notification, you are always subscribed to this event.</Description>
   <pIsImplemented>RegEventNotificationInq</pIsImplemented>
@@ -3430,7 +3465,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </StringReg>
 
  <StringReg Name="DeviceModelName" NameSpace="Standard">
- 
+
   <Description>Camera model name.</Description>
   <Address>0xF200</Address>
   <Length>32</Length>
@@ -3447,7 +3482,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
  </StringReg>
 
  <StringReg Name="DeviceFirmwareVersion" NameSpace="Standard">
- 
+
   <Description>Firmware version of this AVT GigE camera.</Description>
   <Address>0x0088</Address>
   <Length>32</Length>
@@ -3459,7 +3494,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Extension>
    <PvRename Name="DeviceSerialNumber"/>
   </Extension>
- 
+
   <Description>Serial number.</Description>
   <Address>0x00D8</Address>
   <Length>16</Length>
@@ -3467,17 +3502,8 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <pPort>Device</pPort>
  </StringReg>
 
- <StringReg Name="DeviceUserID" NameSpace="Standard">
- 
-  <Description>User-programmable Device Identifier.</Description>
-  <Address>0x0E8</Address>
-  <Length>16</Length>
-  <AccessMode>RW</AccessMode>
-  <pPort>Device</pPort>
- </StringReg>
-
  <StringReg Name="DevicePartNumber" NameSpace="Custom">
- 
+
   <Description>Device part number.</Description>
   <Address>0xF220</Address>
   <Length>32</Length>
@@ -3487,34 +3513,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
 
 
 
- <IntReg Name="RegSensorDigitizationTaps" NameSpace="Custom">
-  <Address>0x14800</Address>
-  <Length>4</Length>
-  <AccessMode>RW</AccessMode>
-  <pPort>Device</pPort>
-  <Cachable>WriteAround</Cachable>
-  <pInvalidator>UserSetLoad</pInvalidator>
-  <Sign>Unsigned</Sign>
-  <Endianess>BigEndian</Endianess>
- </IntReg>
-
- <IntReg Name="RegSensorTaps" NameSpace="Custom">
-  <Address>0x14804</Address>
-  <Length>4</Length>
-  <AccessMode>RO</AccessMode>
-  <pPort>Device</pPort>
-  <Sign>Unsigned</Sign>
-  <Endianess>BigEndian</Endianess>
- </IntReg>
-
- <MaskedIntReg Name="RegImageModeInqSensorTaps" NameSpace="Custom">
-  <Address>0x11000</Address>
-  <Length>4</Length>
-  <AccessMode>RO</AccessMode>
-  <pPort>Device</pPort>
-  <Bit>22</Bit>
-  <Endianess>BigEndian</Endianess>
- </MaskedIntReg>
 
  <IntReg Name="RegSensorWidth" NameSpace="Custom">
   <Address>0x11024</Address>
@@ -3776,33 +3774,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Bit>24</Bit>
   <Endianess>BigEndian</Endianess>
  </MaskedIntReg>
-
- <MaskedIntReg Name="RegSensorTapsInqOne" NameSpace="Custom">
-  <Address>0x11004</Address>
-  <Length>4</Length>
-  <AccessMode>RO</AccessMode>
-  <pPort>Device</pPort>
-  <Bit>31</Bit>
-  <Endianess>BigEndian</Endianess>
- </MaskedIntReg>
-
- <MaskedIntReg Name="RegSensorTapsInqTwo" NameSpace="Custom">
-  <Address>0x11004</Address>
-  <Length>4</Length>
-  <AccessMode>RO</AccessMode>
-  <pPort>Device</pPort>
-  <Bit>30</Bit>
-  <Endianess>BigEndian</Endianess>
- </MaskedIntReg>
-
- <MaskedIntReg Name="RegSensorTapsInqFour" NameSpace="Custom">
-  <Address>0x11004</Address>
-  <Length>4</Length>
-  <AccessMode>RO</AccessMode>
-  <pPort>Device</pPort>
-  <Bit>28</Bit>
-  <Endianess>BigEndian</Endianess>
- </MaskedIntReg>
  <IntReg Name="RegDecimationHorizontalMax" NameSpace="Custom">
   <Address>0x11180</Address>
   <Length>4</Length>
@@ -3855,6 +3826,60 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Sign>Unsigned</Sign>
   <Endianess>BigEndian</Endianess>
  </IntReg>
+
+ <IntReg Name="RegPtpMode" NameSpace="Custom">
+  <Address>0x25100</Address>
+  <Length>4</Length>
+  <AccessMode>RW</AccessMode>
+  <pPort>Device</pPort>
+  <pInvalidator>UserSetLoad</pInvalidator>
+  <Sign>Unsigned</Sign>
+  <Endianess>BigEndian</Endianess>
+ </IntReg>
+
+ <IntReg Name="RegPtpStatus" NameSpace="Custom">
+  <Address>0x25114</Address>
+  <Length>4</Length>
+  <AccessMode>RO</AccessMode>
+  <pPort>Device</pPort>
+  <Cachable>NoCache</Cachable>
+  <PollingTime>1000</PollingTime>
+  <Sign>Unsigned</Sign>
+  <Endianess>BigEndian</Endianess>
+ </IntReg>
+ <IntReg Name="RegPtpAcqGateTime64" NameSpace="Custom">
+  <Address>0x2510C</Address>
+  <Length>8</Length>
+  <AccessMode>RW</AccessMode>
+  <pPort>Device</pPort>
+  <pInvalidator>PtpMode</pInvalidator>
+  <Sign>Unsigned</Sign>
+  <Endianess>BigEndian</Endianess>
+ </IntReg>
+
+<IntReg Name="RegPtpAcqGateTimeHi" NameSpace="Custom">
+  <Address>0x2510C</Address>
+  <Length>4</Length>
+  <AccessMode>RW</AccessMode>
+  <pPort>Device</pPort>
+  <pInvalidator>PtpMode</pInvalidator>
+  <Sign>Unsigned</Sign>
+  <Endianess>BigEndian</Endianess>
+ </IntReg>
+
+ <IntReg Name="RegPtpAcqGateTimeLo" NameSpace="Custom">
+  <Address>0x25110</Address>
+  <Length>4</Length>
+  <AccessMode>RW</AccessMode>
+  <pPort>Device</pPort>
+  <pInvalidator>PtpMode</pInvalidator>
+  <Sign>Unsigned</Sign>
+  <Endianess>BigEndian</Endianess>
+ </IntReg>
+
+
+
+
  <MaskedIntReg Name="RegMirrorXInq" NameSpace="Custom">
   <Address>0x12000</Address>
   <Length>4</Length>
@@ -4143,28 +4168,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Endianess>BigEndian</Endianess>
  </IntReg>
 
-
- <MaskedIntReg Name="RegSensorReadoutModeInq" NameSpace="Custom">
-        <Address>0x14E00</Address>
-        <Length>4</Length>
-        <AccessMode>RO</AccessMode>
-        <pPort>Device</pPort>
-        <Bit>8</Bit>
-        <Endianess>BigEndian</Endianess>
-    </MaskedIntReg>
-
-    <IntReg Name="RegSensorReadoutMode" NameSpace="Custom">
-  <Address>0x14E04</Address>
-  <Length>4</Length>
-  <AccessMode>RW</AccessMode>
-  <pPort>Device</pPort>
-  <pInvalidator>PixelFormat</pInvalidator>
-  <pInvalidator>UserSetLoad</pInvalidator>
-  <Sign>Unsigned</Sign>
-  <Endianess>BigEndian</Endianess>
- </IntReg>
-
-
  <IntReg Name="RegWidth" NameSpace="Custom">
   <Address>0x12124</Address>
   <Length>4</Length>
@@ -4182,20 +4185,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Endianess>BigEndian</Endianess>
  </IntReg>
 
- <IntReg Name="RegWidthInc" NameSpace="Custom">
-        <Address>0x143E0</Address>
-        <Length>4</Length>
-        <AccessMode>RO</AccessMode>
-        <pPort>Device</pPort>
-
-
-
-        <pInvalidator>PixelFormat</pInvalidator>
-        <pInvalidator>BinningHorizontal</pInvalidator>
-        <Sign>Unsigned</Sign>
-        <Endianess>BigEndian</Endianess>
-    </IntReg>
-
  <IntReg Name="RegHeight" NameSpace="Custom">
   <Address>0x12128</Address>
   <Length>4</Length>
@@ -4212,16 +4201,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Sign>Unsigned</Sign>
   <Endianess>BigEndian</Endianess>
  </IntReg>
-
- <IntReg Name="RegHeightInc" NameSpace="Custom">
-        <Address>0x143E4</Address>
-        <Length>4</Length>
-        <AccessMode>RO</AccessMode>
-        <pPort>Device</pPort>
-        <pInvalidator>PixelFormat</pInvalidator>
-        <Sign>Unsigned</Sign>
-        <Endianess>BigEndian</Endianess>
-    </IntReg>
 
  <IntReg Name="RegRegionX" NameSpace="Custom">
   <Address>0x1212C</Address>
@@ -4627,6 +4606,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Bit>25</Bit>
   <Endianess>BigEndian</Endianess>
  </MaskedIntReg>
+
  <MaskedIntReg Name="RegTriggerMode" NameSpace="Custom">
   <Address>0x13410</Address>
   <pIndex Offset="64">IntTriggerSelector</pIndex>
@@ -5040,7 +5020,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Length>4</Length>
   <AccessMode>RW</AccessMode>
   <pPort>Device</pPort>
-  <Cachable>NoCache</Cachable>
   <pInvalidator>UserSetLoad</pInvalidator>
         <pInvalidator>PixelFormat</pInvalidator>
   <Sign>Unsigned</Sign>
@@ -5192,7 +5171,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Length>4</Length>
   <AccessMode>RW</AccessMode>
   <pPort>Device</pPort>
-  <Cachable>NoCache</Cachable>
   <pInvalidator>UserSetLoad</pInvalidator>
   <Sign>Unsigned</Sign>
   <Endianess>BigEndian</Endianess>
@@ -5203,7 +5181,6 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Length>4</Length>
   <AccessMode>RW</AccessMode>
   <pPort>Device</pPort>
-  <Cachable>NoCache</Cachable>
   <pInvalidator>UserSetLoad</pInvalidator>
   <Sign>Unsigned</Sign>
   <Endianess>BigEndian</Endianess>
@@ -5665,11 +5642,7 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Length>4</Length>
   <AccessMode>RO</AccessMode>
   <pPort>Device</pPort>
-
   <Bit>29</Bit>
-
-
-
   <Endianess>BigEndian</Endianess>
  </MaskedIntReg>
 
@@ -5678,13 +5651,8 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Length>4</Length>
   <AccessMode>RO</AccessMode>
   <pPort>Device</pPort>
-
   <pInvalidator>BinningHorizontal</pInvalidator>
   <pInvalidator>BinningVertical</pInvalidator>
-
-
-
-
   <pInvalidator>DecimationHorizontal</pInvalidator>
   <pInvalidator>DecimationVertical</pInvalidator>
   <pInvalidator>UserSetLoad</pInvalidator>
@@ -5707,13 +5675,8 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Length>4</Length>
   <AccessMode>RW</AccessMode>
   <pPort>Device</pPort>
-
   <pInvalidator>BinningHorizontal</pInvalidator>
   <pInvalidator>BinningVertical</pInvalidator>
-
-
-
-
   <pInvalidator>DecimationHorizontal</pInvalidator>
   <pInvalidator>DecimationVertical</pInvalidator>
   <pInvalidator>UserSetLoad</pInvalidator>
@@ -5739,6 +5702,23 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
   <Sign>Unsigned</Sign>
   <Endianess>BigEndian</Endianess>
  </IntReg>
+ <MaskedIntReg Name="RegLensControlInqVoltage" NameSpace="Custom">
+  <Address>0x23000</Address>
+  <Length>4</Length>
+  <AccessMode>RO</AccessMode>
+  <pPort>Device</pPort>
+  <Bit>31</Bit>
+  <Endianess>BigEndian</Endianess>
+ </MaskedIntReg>
+
+ <MaskedIntReg Name="RegLensControlInqDrive" NameSpace="Custom">
+  <Address>0x23000</Address>
+  <Length>4</Length>
+  <AccessMode>RO</AccessMode>
+  <pPort>Device</pPort>
+  <Bit>30</Bit>
+  <Endianess>BigEndian</Endianess>
+ </MaskedIntReg>
  <IntReg Name="RegLensVoltageMax" NameSpace="Custom">
   <Address>0x23100</Address>
   <Length>4</Length>
@@ -6630,6 +6610,8 @@ Allied Vision Technologies-Mako G-234B (6408)-50-0536911283 (169.254.219.79)
         <Bit>12</Bit>
         <Endianess>BigEndian</Endianess>
     </MaskedIntReg>
+
+
  <IntReg Name="RegEventsEnable1" NameSpace="Custom">
   <Address>0x22018</Address>
   <Length>4</Length>
